@@ -60,7 +60,7 @@ int main() {
                 break;
             case 0: 
                  printf(Saindo... \n);
-            break
+                break;
            default:
                 printf("Opção inválida!\n");
         }
