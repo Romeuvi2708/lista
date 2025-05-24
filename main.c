@@ -65,7 +65,7 @@ int main() {
                 printf("Opção inválida!\n");
         }
 
-     (opcao != 0); }
+     while (opcao != 0); }
 
 
     return 0;
