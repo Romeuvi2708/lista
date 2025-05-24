@@ -21,7 +21,7 @@ void cadastrarCarro() {
     printf("Ano: ");
     scanf("%d", &anos[totalCarros]);
 
-    printf("Preço por dia (R$): ");
+    printf("PreÃ§o por dia (R$): ");
     scanf("%f", &precos[totalCarros]);
 
     disponiveis[totalCarros] = 1;
@@ -31,7 +31,7 @@ void cadastrarCarro() {
 }
 
 void listarCarrosDisponiveis() {
-    printf("\nCarros disponíveis:\n");
+    printf("\nCarros disponÃ­veis:\n");
     for (int i = 0; i < totalCarros; i++) {
         if (disponiveis[i]) {
             printf("%d - %s (%d) - R$%.2f/dia\n", i, modelos[i], anos[i], precos[i]);
@@ -43,11 +43,12 @@ void listarCarrosDisponiveis() {
 int main() {
     setlocale(LC_ALL,"portuguese");
     int opcao;
-
+      do {
         printf("==== MENU ====\n");
         printf("1. Cadastrar carro\n");
-        printf("2. Listar carros disponíveis\n");
-        printf("Escolha uma opção: ");
+        printf("2. Listar carros disponÃ­veis\n");
+        printf("0. sair \n");  
+        printf("Escolha uma opÃ§Ã£o: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -57,11 +58,14 @@ int main() {
             case 2:
                 listarCarrosDisponiveis();
                 break;
+            case 0: 
+                 printf(Saindo... \n);
+            break
            default:
-                printf("Opção inválida!\n");
+                printf("OpÃ§Ã£o invÃ¡lida!\n");
         }
 
-     (opcao != 0);
+     (opcao != 0); }
 
 
     return 0;
